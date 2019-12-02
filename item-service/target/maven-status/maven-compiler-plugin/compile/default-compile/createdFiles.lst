@@ -1,0 +1,4 @@
+com\casestudy\item\ItemServiceApplication.class
+com\casestudy\item\Item.class
+com\casestudy\item\ItemRepository.class
+com\casestudy\item\ItemController.class

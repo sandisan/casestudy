@@ -1,0 +1,15 @@
+com\casestudy\salesorder\OrderLineItemRepository.class
+com\casestudy\salesorder\CustomerRepository.class
+com\casestudy\salesorder\RabbitMQConsumer.class
+com\casestudy\salesorder\Item.class
+com\casestudy\salesorder\CustomerSOS.class
+com\casestudy\salesorder\OrderLineItem.class
+com\casestudy\salesorder\SalesOrderRepository.class
+com\casestudy\salesorder\SalesOrderServiceApplication.class
+com\casestudy\salesorder\SalesOrderController.class
+com\casestudy\salesorder\Response.class
+com\casestudy\salesorder\SalesOrderRequest.class
+com\casestudy\salesorder\ItemService.class
+com\casestudy\salesorder\SalesOrder.class
+com\casestudy\salesorder\ItemServiceFallback.class
+com\casestudy\salesorder\RabbitMQConfig.class

@@ -8,20 +8,22 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitMQConfig {
 
-	//@Value("${customer.rabbitmq.queue}")
-	String queueName = "customer.rabbitmq.queue";
+	@Value("${customer.rabbitmq.queue}")
+	String queueName;
 
-	//@Value("${customer.rabbitmq.exchange}")
-	String exchange = "customer.rabbitmq.exchange";
+	@Value("${customer.rabbitmq.exchange}")
+	String exchange;
 
-	//@Value("${customer.rabbitmq.routingkey}")
-	private String routingkey="customer.rabbitmq.routingkey";
+	@Value("${customer.rabbitmq.routingkey}")
+	private String routingkey;
 
 	@Bean
 	Queue queue() {

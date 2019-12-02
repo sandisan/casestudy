@@ -12,6 +12,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @Service
 public class RabbitMQSender {
+	//@Autowired
+	//private RabbitMQProperties rabbitMQProperties;
 	
 	@Autowired
 	private RabbitTemplate  rabbitTemplate;

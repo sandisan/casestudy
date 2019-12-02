@@ -1,0 +1,6 @@
+com\casestudy\customer\CustomerRepository.class
+com\casestudy\customer\CustomerServiceApplication.class
+com\casestudy\customer\CustomerController.class
+com\casestudy\customer\Customer.class
+com\casestudy\customer\RabbitMQConfig.class
+com\casestudy\customer\RabbitMQSender.class

@@ -14,7 +14,7 @@
 	<name>customer-service</name>
 	<description>Demo project for Spring Boot</description>
 
-<properties>
+	<properties>
 		<java.version>1.8</java.version>
 		<Spring-cloud-services.version>1.6.0.RELEASE</Spring-cloud-services.version>
 		<spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
@@ -103,7 +103,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 	</dependencies>
 
 	<dependencyManagement>

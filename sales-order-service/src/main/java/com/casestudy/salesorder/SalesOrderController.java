@@ -27,6 +27,9 @@ public class SalesOrderController {
 	@Autowired
 	ItemService itemService;
 
+	@Autowired
+	SalesOrderConfig salesOrderConfig;
+	
 	@PostMapping(value = "/order", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public Response<Long> saveCustomer(@RequestBody SalesOrderRequest salesOrderRequest) {
 		 
@@ -92,5 +95,17 @@ public class SalesOrderController {
 		olt.add(lt);
 		sor.setOrderLineItem(olt);
 		return sor;
+	}
+	
+	@GetMapping("/config")
+	public Item configDefaultItemCheck() {
+		// TODO Auto-generated method stub
+		//System.out.println("Falling back");
+		Item itm = new Item();
+		itm.setId(999L);
+		itm.setName("default name");
+		itm.setDescription(salesOrderConfig.getDescription());
+		itm.setPrice("9999");
+		return itm ;
 	}
 }

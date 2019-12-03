@@ -3,7 +3,7 @@ package com.casestudy.salesorder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@ConfigurationProperties(prefix="sale-order-service")
+@ConfigurationProperties(prefix="sales-order-service")
 @Component
 public class SalesOrderConfig {
 

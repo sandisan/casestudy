@@ -6,6 +6,7 @@ com\casestudy\salesorder\CustomerSOS.class
 com\casestudy\salesorder\OrderLineItem.class
 com\casestudy\salesorder\SalesOrderRepository.class
 com\casestudy\salesorder\SalesOrderServiceApplication.class
+com\casestudy\salesorder\SalesOrderConfig.class
 com\casestudy\salesorder\SalesOrderController.class
 com\casestudy\salesorder\Response.class
 com\casestudy\salesorder\SalesOrderRequest.class

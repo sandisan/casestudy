@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
 
 @RestController
 public class SalesOrderController {
@@ -30,7 +32,9 @@ public class SalesOrderController {
 	@Autowired
 	SalesOrderConfig salesOrderConfig;
 	
+	
 	@PostMapping(value = "/order", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@HystrixCommand(fallbackMethod="fallback")
 	public Response<Long> saveCustomer(@RequestBody SalesOrderRequest salesOrderRequest) {
 		 
 		Response<Long> response = new Response<>();
@@ -107,5 +111,13 @@ public class SalesOrderController {
 		itm.setDescription(salesOrderConfig.getDescription());
 		itm.setPrice("9999");
 		return itm ;
+	}
+	
+	
+	public Response<Long> fallback(SalesOrderRequest salesOrderRequest) {
+		Response<Long> response = new Response<>();
+		response.setIsError(true);
+		response.setMessage("Encountered Issues .. Please try later...");
+		return response ;
 	}
 }

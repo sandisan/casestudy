@@ -7,13 +7,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class SalesOrderConfig {
 
-	private String description;
+	private String fallbackmessage;
 
-	public String getDescription() {
-		return description;
+	public String getFallbackmessage() {
+		return fallbackmessage;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setFallbackmessage(String fallbackmessage) {
+		this.fallbackmessage = fallbackmessage;
 	}
 }

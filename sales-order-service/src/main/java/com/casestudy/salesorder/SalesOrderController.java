@@ -108,7 +108,7 @@ public class SalesOrderController {
 		Item itm = new Item();
 		itm.setId(999L);
 		itm.setName("default name");
-		itm.setDescription(salesOrderConfig.getDescription());
+		itm.setDescription(salesOrderConfig.getFallbackmessage());
 		itm.setPrice("9999");
 		return itm ;
 	}
@@ -117,7 +117,7 @@ public class SalesOrderController {
 	public Response<Long> fallback(SalesOrderRequest salesOrderRequest) {
 		Response<Long> response = new Response<>();
 		response.setIsError(true);
-		response.setMessage("Encountered Issues .. Please try later...");
+		response.setMessage(salesOrderConfig.getFallbackmessage());
 		return response ;
 	}
 }

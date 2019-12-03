@@ -4,6 +4,7 @@ applications:
   memory: 750M
   env:
     SPRING-PROFILES-ACTIVE: dev
+    VCP_APP_PORT: 8083
   services:
   - service-registry
   - rabbit-mq

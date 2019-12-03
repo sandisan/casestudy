@@ -15,7 +15,7 @@ public class ItemServiceFallback implements ItemService {
 		Item itm = new Item();
 		itm.setId(999L);
 		itm.setName("default name");
-		itm.setDescription(salesOrderConfig.getDescription());
+		itm.setDescription(salesOrderConfig.getFallbackmessage());
 		itm.setPrice("9999");
 		return itm ;
 	}

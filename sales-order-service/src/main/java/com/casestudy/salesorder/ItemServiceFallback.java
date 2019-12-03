@@ -9,7 +9,12 @@ public class ItemServiceFallback implements ItemService {
 	public Item getItemByName(String itemName) {
 		// TODO Auto-generated method stub
 		System.out.println("Falling back");
-		return new Item();
+		Item itm = new Item();
+		itm.setId(999L);
+		itm.setName("default name");
+		itm.setDescription("default Description");
+		itm.setPrice(9999L);
+		return itm ;
 	}
 	
 

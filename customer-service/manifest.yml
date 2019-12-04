@@ -5,5 +5,5 @@ applications:
   env:
     SPRING-PROFILES-ACTIVE: dev
   services:
-  - service-registry
-  - rabbit-mq
+  - service-registry-491968
+  - rabbit-mq-491968

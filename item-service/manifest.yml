@@ -5,4 +5,4 @@ applications:
   env:
     SPRING-PROFILES-ACTIVE: dev
   services:
-  - service-registry
+  - service-registry-491968

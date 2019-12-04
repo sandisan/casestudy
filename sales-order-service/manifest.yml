@@ -1,11 +1,10 @@
 applications:
-- name: sales-order-service-491968
+- name: sales-order-service-4919681
   path: target/sales-order-service-0.0.1-SNAPSHOT.jar
   memory: 750M
   env:
     SPRING-PROFILES-ACTIVE: dev
-    VCP_APP_PORT: 8083
   services:
-  - service-registry
+  - service-registry-491968
   - rabbit-mq
-  - config-server
+  - config-server-491968
